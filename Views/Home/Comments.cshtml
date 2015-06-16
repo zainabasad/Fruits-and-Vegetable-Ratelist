@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Comments";
+    Layout = "~/Views/Shared/FruitsLayout.cshtml";
+}
+
+<div>
+    <img src="~/Images/com.jpg" style="padding-left:100px;padding-right:50px" width="1300" height="300";border:double >
+</div>
+<div style="padding-left:40px">    
+    <div style="border:double;margin-top:50px;margin-left:50px;margin-right:50px">
+        <header style="font-family:'Colonna MT';margin:70px; font-size:50px;color:red"> Comments </header>
+
+         @foreach( var i in Model)
+        { 
+        <div class="container " style="border:groove">
+            <div class="col-sm-2" style="margin-top:10px">
+                <label style="font-family:Calibri;color:green; font-size:20px;padding:5px"><span class="glyphicon glyphicon-user"></span> @i.Name</label>
+            </div>
+          
+            <div class="col-sm-6" style="margin-top:10px">
+                <label style=" font-family: calibri; color:green; font-size:20px; padding: 5px">
+    @i.Comment1</label>
+        </div>
+
+
+        </div>
+
+        }
+        </div>
+</div>

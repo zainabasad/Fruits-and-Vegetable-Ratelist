@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+
+    string Name = (string)Session["UserName"];
+}
+<body>
+    
+    <button style="float:Left" >
+        <div class="btn btn-lg"> <span class="glyphicon glyphicon-user"></span> @Name @Html.ActionLink("Log out", "Login", "Home") </div>
+    </button>
+    
+    <div style="padding-left:500px;font-family:'Colonna MT';font-size:60px;color:red">
+
+        <span> Category</span>
+
+
+    </div>
+
+
+      <div  style="padding-left:500px;font-family:'Colonna MT';font-size:50px;color:red" >
+         
+        <a href="~/Fruits/Index"> <span> Fruits </span></a>
+
+
+        </div>
+    
+    <div style="padding-left: 500px;font-family: 'Colonna MT'; font-size: 50px; color: red">
+
+        <a href="~/Vegetable/Index"> <span> Vegetable</span></a>
+
+
+    </div>
+
+    
+
+</body>

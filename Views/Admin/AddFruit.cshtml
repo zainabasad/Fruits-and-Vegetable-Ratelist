@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "AddFruit";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row mrgn 50">
+        <div class=" col-lg-12">
+
+            <form class="form-horizontal" method="post" action="~/Admin/AddFruits" enctype="multipart/form-data">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-3 control-label">Name</label>
+                        <div class="col-sm-15 col-xs-5">
+                            <input type="text" class="form-control" name="Name" placeholder="ItemName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Lev1" class="col-sm-3 control-label">Level 1</label>
+                        <div class="col-sm-15 col-xs-5">
+                            <input type="text" class="form-control" name="Lev1" placeholder="First Level Price / Kg">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Lev2" class="col-sm-3 control-label">Level 2</label>
+                        <div class="col-sm-15 col-xs-5">
+                            <input type="text" class="form-control" name="Lev2" placeholder="Second Level Price / Kg">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Lev3" class="col-sm-3 control-label">Level 3</label>
+                        <div class="col-sm-15 col-xs-5">
+                            <input type="text" class="form-control" name="Lev3" placeholder="Third Level Price / Kg">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description" class="col-sm-3 control-label">Description</label>
+                        <div class="col-sm-15 col-xs-5">
+                            <textarea  name="Description" rows="4" class="form-control" id="Description" placeholder="Enter your Description…" title="Please enter your Description (at least 10 characters)"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Date" class="col-sm-3 control-label">Date</label>
+                        <div class="col-sm-15 col-xs-5">
+                            <input type="date" class="form-control" name="Date" placeholder="current date">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="Type">Type</label>
+                        <div class="controls">
+
+                            <label class="radio-inline" for="Type-1">
+                                <input type="radio" name="Type" id="Type-1" value="Fruit">
+                                Fruit
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                       <label for="Image" class="col-sm-3 control-label">Image</label>
+                        <div class="col-sm-15 col-xs-5">
+                            <input type="file" name="Image" />
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="form-group col-sm-20">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button class=" btn btn-lg btn btn-success">ADD Fruit</button>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+

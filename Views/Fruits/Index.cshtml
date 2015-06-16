@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+@{
+    ViewBag.Title = "Fruits/Index";
+    Layout = "~/Views/Shared/FruitsLayout.cshtml";
+}
+@{
+    string Name = (string)Session["UserName"];
+    int Id = (int)Session["Id"];
+}
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="col-lg-2" style="padding-left:100px">
+      <a class=" btn-danger btn btn-info btn-lg" href="~/Fruits/RateList"> <span> RateList </span></a>
+ </div>
+    
+  
+    <form class="form-search" method="post"  action="/Fruits/Search">
+        <div class="input-append" style="padding-left:150px">
+            <input type="text" class="input-lg search-query" name="Name" placeholder="Search" value="">
+            <button type="submit" class="btn-success btn btn-info btn-lg"><i class="icon-search"></i> Go!</button>
+        </div>
+    </form>
+    <br>
+    <br> 
+    <div class="container">
+        <h3 style="font-family:'Colonna MT';font-size:70px;color:mediumpurple">Fruits Description</h3>
+        <p style="color:mediumpurple">Here is description of each fruit , Benefits of every fruit is also given. You can comment the price of fruits at which you have buyed it from market.</p>
+       <br>
+        <br>
+        @foreach(var i in Model)
+        { 
+        <div class="row">
+            <div class="col-md-4">
+                <header style="font-family:'Californian FB';font-size:30px;color:purple" > @i.Name</header>
+                <img src="~/Images/@i.Image" alt="" style="width:300px; height:250px ;border:double">
+            </div>
+            <br>
+            <br>
+            <div class="col-sm-15 col-xs-8">
+                <p style="color:purple">@i.Description</p>
+                <button type="button" class="btn-success btn-btn-info" data-toggle="modal" data-target="#myModal">Add Comment</button>
+
+
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Thanks for your Comment</h4>
+                            </div>
+                            <div class="modal-body">
+
+                            </div>
+
+                            <form class="modal-body" action="~/Home/AddComment" method="post">
+                                <input type="text" class="form-control" name=Comment1 placeholder=":)">
+                                <input type="hidden" value="@Name" name="Name">
+                                <input type="hidden" value="@Id" name="Id">
+                                <input type="hidden" value="@i.Id" name="ItemId" />
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-success">Save changes</button>
+                                </div>
+                            </form>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        }
+        
+    </div>
+
+</body>
+

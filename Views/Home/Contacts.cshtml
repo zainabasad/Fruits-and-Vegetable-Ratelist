@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Contacts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section  class="page-section secPad" style="background-color:peachpuff">
+    <div class="container">
+
+        <div class="row">
+            <div class="heading text-center">
+                <!-- Heading -->
+                <h3>Let's Keep In Touch!</h3>
+                <p>Thank you for visiting out our website. If you would like to get into contact with us, please fill out the form below.</p>
+            </div>
+        </div>
+
+        <div class="row mrgn30">
+
+            <form method="post" action="/Home/AddComment" role="form">
+
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="Name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="Email" id="email" placeholder="Enter email" title="Please enter a valid email address">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="comments">Comments</label>
+                        <textarea name="Comment1" class="form-control" id="Comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
+                    </div>
+                    <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+                    <div class="result"></div>
+                </div>
+            </form>
+            <div class="col-sm-4">
+                <h4>Address:</h4>
+                <address>
+                    xxx Company<br>
+                    yyy city<br>
+                    zzz Pakistan
+                    <br>
+                </address>
+                <h4>Phone:</h4>
+                <address>
+                    +92 - 237584738<br>
+                </address>
+            </div>
+        </div>
+    </div>
+    <!--/.container-->
+</section>

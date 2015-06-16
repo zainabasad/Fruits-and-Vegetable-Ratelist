@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="page-section secPad" style="background-color:peachpuff">
+    <div class="container">
+
+        <div class="row mrgn30">
+            
+            <form class="form-horizontal" action="/Home/LoginUser" method="post">
+
+                <div class="form-group">
+                    <br>
+                    <br>
+                    <label for="Email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-15 col-xs-5">
+                        <input type="email" class="form-control" name="Email" placeholder="Email">
+                    </div>
+                
+                    <br>
+                                       
+                    <br>
+                    <label for="Password" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-15 col-xs-5">
+                        <input type="password" class="form-control" name="Password" placeholder="Password">
+                    </div>
+                  <br>
+                    <br>
+                    <div class="col-sm-offset-3 col-sm-11">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-sm-offset-3 col-sm-11">
+                        <button class="btn btn-primary btn-lg" type="submit"> Sign in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,166 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="page-section secPad" style="background-color:peachpuff">
+    <div class="container">
+
+        <div class="row mrgn 50">
+            <div class=" col-lg-12">
+                <form class="form-horizontal" action="~/Home/AddUser" method="post">
+                    
+                        <br>
+                        <div class="form-group">
+                            <label for="Name" class="col-sm-3 control-label">Name</label>
+                            <div class="col-sm-15 col-xs-4">
+                                <input type="text" class="form-control" name="Name" placeholder="UserName">
+                            </div>
+                        </div>
+
+                        @*<input type="text"  id="Name"  class=" name"  name="Name" placeholder="Name" required/>
+                        <input type="button" id=" b1" value="check"/>
+                        <div id="result"></div>
+                        @Scripts.Render("~/bundles/jquery")
+                        <script>
+
+                            $(document).ready(function () {
+
+                                $('#checking').hide();
+
+                                $('#b1').click(function () {
+
+                                    var userName = $('#UserName').val();
+
+                                    //alert('User Name ='+ userName);
+                                    $('#checking').show();
+                                    $.getJSON("/home/CheckUserName?UserName=" + userName, function (data) {
+                                        $('#checking').hide();
+                                        if (data) {
+                                            $('#result').text("User already exists in database");
+
+                                        }
+                                        else {
+                                            $('#result').text("User Name is available");
+                                        }
+                                    });
+
+                                });
+
+                            });
+                        </script>
+            </div>*@
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="City">City</label>
+                <div class="col-sm-15 col-xs-4 controls">
+                    <select id="City" name="City" class="input-medium">
+                        <option>Lahore</option>
+                        <option>Faisalabad</option>
+                        <option>Fateh Jang</option>
+                        <option>Ghakhar Mandi</option>
+                        <option>Gojra</option>
+                        <option>Gujranwala</option>
+                        <option>Islamabad</option>
+                        <option>Karachi</option>
+
+                        <option>Multan</option>
+                        <option>Sailkot</option>
+                        <option>Sargodha</option>
+                        <option>Shakargarh</option>
+                        <option>Sheikhupura</option>
+                        <option>Sialkot</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class=" col-sm-3 control-label" for="Province">Province</label>
+                <div class="col-sm-15 col-xs-5 Ccontrols">
+                  <select id="Province" name="Province" class="input-medium">
+                        <option>Punjab</option>
+                        <option>Sindh</option>
+                        <option>Balochistan</option>
+                        <option>KPK</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="Type">Type</label>
+                <div class="controls">
+                    <label class=" radio-inline" for="Type-0">
+                        <input type="radio" name="Type_" id="Type-0" value="User" checked="checked">
+                        User
+                    </label>
+                    <label class="radio-inline" for="Type-1">
+                        <input type="radio" name="Type_" id="Type-1" value="Admin">
+                        Admin
+                    </label>
+                </div>
+            </div>
+            <!--Multiple Radios -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="Gender">Gender</label>
+                <div class="controls">
+                    <label class=" radio-inline" for="Gender-0">
+                        <input type="radio" name="Gender" id="Gender-0" value="Male" checked="checked">
+                        Male
+                    </label>
+                    <label class="radio-inline" for="Gender-1">
+                        <input type="radio" name="Gender" id="Gender-1" value="Female">
+                       Female
+                    </label>
+                </div>
+            </div>
+
+            <!-- Multiple Radios -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="Age">Age</label>
+                <div class="controls">
+                    <label class="radio-inline" for="Age-0">
+                        <input type="radio" name="Age" id="Age-0" value="15-30" checked="checked">
+                        15-30
+                    </label>
+                    <label class="radio-inline" for="Age-1">
+                        <input type="radio" name="Age" id="Age-1" value="31-60">
+                        30-60
+                    </label>
+
+                </div>
+            </div>
+
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label for="Email" class="col-sm-3 control-label">Email</label>
+                <div class="col-sm-15 col-xs-4">
+                    <input type="email" class="form-control" name="Email" placeholder="Email">
+                </div>
+            </div>
+
+            <!-- Password input-->
+
+            <div class="form-group">
+                <label for="Password" class="col-sm-3 control-label">Password</label>
+                <div class="col-sm-15 col-xs-4">
+                    <input type="password" class="form-control" name="Password" placeholder="Password">
+                </div>
+
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button id="NewUser" name="NewUser" class="btn btn-success">Register</button>
+                </div>
+            </div>
+
+          
+            </form>
+
+        </div>
+            </div>
+</div>
+</section>
