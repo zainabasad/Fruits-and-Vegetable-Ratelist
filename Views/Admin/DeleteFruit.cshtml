@@ -23,17 +23,17 @@
         </thead>
         <tbody>
             @foreach (var i in Model)
-            {
-                <tr>
-                    <td style="padding-left:20px">@i.Name</td>
+{
+    <tr>
+        <td style="padding-left:20px">@i.Name</td>
 
-                    <td style="padding-left:20px"><img src="~/Images/@i.Image" width="50" height="50"></td>
-                    <td style="padding-left:20px">@i.lev1</td>
-                    <td style="padding-left:20px">@i.lev2</td>
-                    <td style="padding-left:20px">@i.lev3</td>
-                    <td class=" btn btn-success btn-default" style="font-family:Calibri;font-size:25px"> @Html.ActionLink("Delete", "DeleteFruits", new { id = i.Id })</td>
-                </tr>
-            }
+        <td style="padding-left:20px"><img src="~/Images/@i.Image" width="50" height="50"></td>
+        <td style="padding-left:20px">@i.lev1</td>
+        <td style="padding-left:20px">@i.lev2</td>
+        <td style="padding-left:20px">@i.lev3</td>
+        <td><button style="margin-left:20px; margin-top:8px" class="btn btn-danger " type="submit" onclick="location.href='/Admin/DeleteFruits?id=@i.Id'"><span class="glyphicon glyphicon-remove"></span></button></td>
+    </tr>
+}
         </tbody>
     </table>
 </div>
